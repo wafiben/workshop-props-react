@@ -1,13 +1,17 @@
 import React from "react";
-
-function List({ users }) {
+import CardUser from "./CardUser";
+function List({ users, showName }) {
   return (
-    <div style={{ textAlign: "center" }}>
+    <div
+      style={{
+        textAlign: "center",
+        display: "flex",
+        justifyContent: "space-around",
+        marginTop: "300px",
+      }}
+    >
       {users.map((element, index) => (
-        <div  key={index}>
-          <h1>{element.name}</h1>
-          <p>{element.email}</p>
-        </div>
+        <CardUser key={index} element={element} showName={showName} />
       ))}
     </div>
   );
