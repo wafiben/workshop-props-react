@@ -1,20 +1,16 @@
-import React from 'react';
+import React from "react";
 
-
-function List({user,age,person,sayHello}) {
-    const handleClick=()=>{
-        sayHello(user);
-    }
-  
+function List({ users }) {
   return (
-    <div style={{textAlign: 'center'}}>
-    
-    <h1>{user}</h1>
-    <h2>{age}</h2>
-    <h3>{person.name}</h3>
-    <button onClick={handleClick}>say hello</button>
+    <div style={{ textAlign: "center" }}>
+      {users.map((element, index) => (
+        <div  key={index}>
+          <h1>{element.name}</h1>
+          <p>{element.email}</p>
+        </div>
+      ))}
     </div>
-  )
+  );
 }
 
-export default List
+export default List;

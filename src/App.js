@@ -1,17 +1,18 @@
-import logo from "./logo.svg";
 import "./App.css";
 import List from "./Components/List";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  const user = "louay";
-  const age = 32;
-  const person = { name: "yassin", adress: "tunis" };
-  const sayHello=(x)=>{
-     alert(x)
-  }
+  const users = [
+    { name: "amin", email: "amin@gmail.com" },
+    { name: "loay", email: "loay@gmail.com" },
+    {name:"brahim",email:"brahim@gmail.com"},
+    {name:"karim",email:"karim@gmail.com"}
+  ];
+
   return (
     <div>
-      <List user={user} age={age} person={person}  sayHello={sayHello}/>
+      <List users={users} />
     </div>
   );
 }
